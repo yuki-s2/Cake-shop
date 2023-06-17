@@ -8,9 +8,13 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <!-- fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-<!--slick-->
+<!--slick-pc-->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="css/6-1-7.css">
+<!-- slick-sp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+
 <!-- drawer.css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
 
@@ -25,30 +29,14 @@
 <body>
 <div class="body__border">
 
-<header class="header">
-  <div class="header__logo">
+<header class="header is-pc">
+  <div class="header__logo is-pc">
     <h1>Cake shop</h1>
     <p>Made to order</p>
   </div>
 
 
-  <div class="drawer drawer--right">
-      <!-- ハンバーガーボタン -->
-      <button type="button" class="drawer-toggle drawer-hamburger">
-        <span class="sr-only">toggle navigation</span>
-        <span class="drawer-hamburger-icon"></span>
-      </button>
-      <!-- ナビゲーションの中身 -->
-      <nav class="drawer-nav" role="navigation">
-        <ul class="drawer-menu">
-          <li><a class="drawer-brand" href="#">Cake shop</a></li>
-          <li><a class="drawer-menu-item" href="#">Nav1</a></li>
-          <li><a class="drawer-menu-item" href="#">Nav2</a></li>
-        </ul>
-      </nav>
-  </div>
-
-  <div class="header__nav">
+  <div class="header__nav is-pc">
     <ul class="header__nav-list">
         <li><a href="#" class="header__nav-item">Home</a></li>
         <li><a href="#" class="header__nav-item">Catalog</a></li>
@@ -57,34 +45,55 @@
     </ul>
   </div>
 
-  <div class="header__icon">
-    <div class="header__icon-search"><img src="img/Group.svg" alt="検索"></div>
-    <div class="header__icon-basket"><img src="img/GroupB.svg" alt="買い物かご"></div>
+  <div class="header__icon is-pc">
+    <div class="header__icon-search is-pc"><img src="img/Group.svg" alt="検索"></div>
+    <div class="header__icon-basket is-pc"><img src="img/GroupB.svg" alt="買い物かご"></div>
   </div>
 </header>
 
 
 <section class="top">
+
+    <div class="drawer drawer--right">
+        <!-- ハンバーガーボタン -->
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+        <!-- ナビゲーションの中身 -->
+        <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-brand" href="#">Cake shop</a></li>
+            <li><a class="drawer-menu-item" href="#">Catalog</a></li>
+            <li><a class="drawer-menu-item" href="#">Delivery</a></li>
+            <li><a class="drawer-menu-item" href="#">Contacts</a></li>
+          </ul>
+          <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+        </nav>
+    </div>
+
 <div class="top__container">
 <div class="top__left">
   <div class="top__text">
     <div class="top__text-title">
-      <h2>We make cakes<br>
+      <h2 class="is-pc">We make cakes<br>
           to order.</h2>
+      <h1 class="is-sp">Cake shop</h1>
     </div>
     <div class="top__text-title-sub">
-      <p>Customize your cake to your liking.</p>
+      <p class="top__text-title-sub-p">Customize your cake to your liking.</p>
+      <p class="is-sp">Made to order</p>
     </div>
   </div><!--top__text-->
   <div class="top__sns">
       <div class="top__sns-facebook">
-          <img src="img/FACEBOOK.svg" alt="facebook">
+        <i class="fa-brands fa-facebook"></i>
       </div>
       <div class="top__sns-twitter">
-          <img src="img/twitter.svg" alt="twitter">
+        <i class="fa-brands fa-square-twitter"></i>
       </div>
       <div class="top__sns-instagram">
-          <img src="img/Instagram.svg" alt="instagram">
+        <i class="fa-brands fa-instagram"></i>
       </div>
   </div><!--top__sns-->
 </div><!--top__left-->
@@ -100,7 +109,7 @@
         <div class="process__item">
           <h4 class="process__item-title">Order</h4>
           <div class="process__item-img"><img src="img/11213_line-min.png" alt="/"></div>
-          <p class="process__item-text">You can make reservations<br>online or order in-store.</p>
+          <p class="process__item-text is-pc">You can make reservations<br>online or order in-store.</p>
         </div>
 
         <div class="process__arrow"><img src="img/Arrow 1.svg" alt=""></div>
@@ -108,7 +117,7 @@
         <div class="process__item">
           <h4 class="process__item-title">Cooking</h4>
           <div class="process__item-imgK"><img src="img/16648_line-min.png" alt="/"></div>
-          <p class="process__item-text">Cakes are made upon reservation.</p>
+          <p class="process__item-text is-pc">Cakes are made upon reservation.</p>
         </div>
 
         <div class="process__arrow"><img src="img/Arrow 1.svg" alt=""></div>
@@ -116,7 +125,7 @@
         <div class="process__item">
           <h4 class="process__item-title">Delivery</h4>
           <div class="process__item-imgT"><img src="img/12494_line-min.png" alt="/"></div>
-          <p class="process__item-text">Available for delivery or in-store pickup.</p>
+          <p class="process__item-text is-pc">Available for delivery or in-store pickup.</p>
         </div>
     </div>
 </section><!--process-->
@@ -125,9 +134,9 @@
 <section class="service">
     <div class="section__title-box">
         <h3 class="section__title"><span>/&nbsp;</span>Service</h3>
-        <p class="section__title-sub">Please use the best service for you from this list.</p>
+        <p class="section__title-sub">Please use the best service<br class="is-sp"> for you from this list.</p>
     </div>
-    <ul class="slider">
+    <ul class="slider slide">
         <li><a href="#"><img src="img/Frame 6-min.png" alt=""><p class="service__title">Customize</p></a></li>
         <li><a href="#"><img src="img/Frame 5-min.png" alt=""><p class="service__title">Regular menu</p></a></li>
         <li><a href="#"><img src="img/Frame 7-min.png" alt=""><p class="service__title">Delivery</p></a></li>
@@ -199,7 +208,7 @@
 <section class="customize">
     <div class="section__title-box">
         <h3 class="section__title"><span>/&nbsp;</span>Customize</h3>
-        <p class="section__title-sub">You can choose your decoration items and colors<br>according to your taste and purpose.</p>
+        <p class="section__title-sub">You can choose your decoration items and<br> colors according to your taste and purpose.</p>
     </div>
     <div class="customize__container">
         <div class="customize__left">
@@ -207,18 +216,24 @@
         </div><!--customize__left-->
         <div class="customize__right">
             <div class="customize__right-box">
+            <div>
             <ul class="customize__list">
                 <li class="customize__item">・ Size</li>
                 <li class="customize__item">・ Cream</li>
             </ul>
+            </div>
+            <div>
             <ul class="customize__list-center">
                 <li class="customize__item">・ Pearl</li>
                 <li class="customize__item">・ Fruit</li>
             </ul>
+            </div>
+            <div>
             <ul class="customize__list">
                 <li class="customize__item">・ Message</li>
                 <li class="customize__item">・ Photo</li>
             </ul>
+            </div>
             </div>
         </div><!--customize__right-->
     </div>
@@ -228,7 +243,8 @@
 <section class="shop">
     <div class="section__title-box">
         <h3 class="section__title"><span>/&nbsp;</span>Shop</h3>
-        <p class="section__title-sub">You can order and pick up your order at the store.</p>
+        <p class="section__title-sub is-pc">You can order and pick up your order at the store.</p>
+        <p class="section__title-sub is-sp">You can pick it up at the store.</p>
     </div>
     <div class="shop__img">
         <img src="img/Frame 31-min.png" alt="/">
@@ -264,19 +280,26 @@
               <li><a class="footer__nav-list" href="">Delivery</a></li>
               <li><a class="footer__nav-list" href="">Contacts</a></li>
           </ul>
-          <div class="footer__small">
+          <div class="footer__small is-pc">
             <small>©2023 cake shop. All Rights Reserved.</small>
           </div>
         </div><!--footer__middle-->
         <ul class="footer__icon">
-            <li><a class="footer__icon-facebook" href="/"><img src="img/FACEBOOK.svg" alt="facebook"></a></li>
-            <li><a class="footer__icon-twitter" href="/"><img src="img/twitter.svg" alt="twitter"></a></li>
-            <li><a class="footer__icon-instagram" href="/"><img src="img/Instagram.svg" alt="instagram"></a></li>
+            <li><a class="footer__icon-facebook" href="/"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a class="footer__icon-twitter" href="/"><i class="fa-brands fa-square-twitter"></i></a></li>
+            <li><a class="footer__icon-instagram" href="/"><i class="fa-brands fa-instagram"></i></a></li>
         </ul><!--footer__icon-->
+        <div class="footer__small is-sp">
+            <small>©2023 cake shop. All Rights Reserved.</small>
+          </div>
     </div><!--footer__container-->
 </footer>
 
 </div><!--body__container-->
+<!-- Javasript 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>-->
+
 <!-- jquery & iScroll -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
