@@ -95,3 +95,57 @@ $('.slider').slick({
 
 }
 });
+
+
+jQuery(window).scroll(function (){
+	jQuery('.blur').each(function(){
+		var elemPos = jQuery(this).offset().top,
+		scroll = jQuery(window).scrollTop(),
+		windowHeight = jQuery(window).height();
+
+			if (scroll > elemPos - windowHeight + 150){
+				jQuery(this).addClass('scrollin');
+			}
+	});
+});
+
+
+
+const targets = document.getElementsByClassName('fade');
+for(let i = targets.length; i--;){
+ let observer = new IntersectionObserver((entries, observer) => {
+  for(let j = entries.length; j--;){
+   if (entries[j].isIntersecting) {
+    entries[j].target.classList.add('active');
+   } else{
+    entries[j].target.classList.remove('active');
+   }
+  }
+ });
+ observer.observe(targets[i]);
+}
+
+
+
+function fadeAnime(){
+
+  $('.fadeUpTrigger').each(function(){ 
+    var elemPos = $(this).offset().top-50;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('fadeIn');
+    }else{
+    $(this).removeClass('fadeIn');
+    }
+    });
+}
+
+  $(window).scroll(function (){
+    fadeAnime();
+  });
+
+  $(window).on('load', function(){
+    fadeAnime();
+  });
+

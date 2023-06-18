@@ -72,6 +72,35 @@ img {
 }
 
 
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+
+
+.fade {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 1.5s, transform 1s;
+}.fade.active {
+	opacity: 1;
+	transform: translateY(0px);
+}
+  
+
+
 .drawer--right .drawer-hamburger {
     right: 40px;
     top: 20px;
@@ -234,6 +263,10 @@ img {
         &-item {
             font-size: 18px;
             color: $text-color;
+            &:hover {
+            border-bottom: 3px solid #F97979;
+            padding-top: 3px;
+            }
         }
     }
 
@@ -289,7 +322,7 @@ img {
 
     &__left {
         margin-left: 40px;
-        max-width: 410px;
+        //max-width: 410px;
         @media only screen and (min-width: 1400px) {
             margin-left: 15%;
         }
@@ -309,7 +342,6 @@ img {
             height: 70px;
         }
 
-        
         @include mq(sm) {
             height: 35%;
             margin: 50px 0 0;
@@ -331,6 +363,14 @@ img {
 
             @include mq(sm) {
                 font-size: 12px;
+            }
+
+            h2 {  
+                br {
+                    @media only screen and (min-width: 1800px) {
+                        display: none;
+                    }
+                    }
             }
 
             &-sub {
@@ -358,6 +398,9 @@ img {
 
         &-facebook {
             width: 20px;
+            a {
+                color: $text-color;
+            }
             @include mq(sm) {
                 width: 13px;
             }
@@ -366,6 +409,9 @@ img {
         &-twitter {
             width: 20px;
             margin-left: 15px;
+            a {
+                color: $text-color;
+            }
             @include mq(sm) {
                 width: 13px;
             }
@@ -374,6 +420,9 @@ img {
         &-instagram {
             width: 20px;
             margin-left: 15px;
+            a {
+                color: $text-color;
+            }
             @include mq(sm) {
                 width: 14px;
             }
@@ -396,6 +445,7 @@ img {
         justify-content: space-between;
         align-items: center;
         width: 70%;
+        max-width: 1000px;
         @include mq(sm) {
             margin: 110px auto 70px;
             width: 80%;
@@ -455,7 +505,9 @@ img {
     }
 
     &__arrow {
-        width: 15px;
+        @include mq(sm) {
+            width: 15px;
+        }
     }
 }
 
@@ -489,6 +541,7 @@ width: 100%;
         left: 50%;
         transform: translate( -50%, -50% );
         width: 60%;
+        max-width: 670px;
         @include mq(sm) {
             width: 75%;
             li {
@@ -513,12 +566,11 @@ width: 100%;
         }
 
         &-date {
-            color: $text-color;
+            color: #4a4a76;
             font-size: 14px;
             margin-right: 50px;
             @include mq(sm) {
                 font-size: 12px;
-                color: #4a4a76;
             }
         }
 
@@ -526,6 +578,9 @@ width: 100%;
             color: $text-color;
             font-size: 20px;
             font-family: 'Times New Roman',sans-serif;
+            &:hover {
+                color: #b5b4b4;
+            }
             @include mq(sm) {
                 margin-top: 10px;
                 font-size: 18px;
@@ -573,7 +628,6 @@ width: 100%;
 
         &-right {
             width: 38%;
-            border: 3px solid #F97979;
             @include mq(md) {
                 height: 362px;
             }
@@ -583,11 +637,14 @@ width: 100%;
                 margin: 0 auto;
                 height: auto;
             }
+
             img {
                 @include mq(md) {
                     height: 362px;
 
                 }
+                border: 3px solid #F97979;
+
             }
         }
     }
