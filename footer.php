@@ -5,12 +5,22 @@
             <p class="footer__logo-sub">Made to order</p>
         </div><!--footer__logo-->
         <div class="footer__middle">
-          <ul class="footer__nav">
+        <?php
+        wp_nav_menu(
+        array(
+          'depth' => 1,
+          'theme_location' => 'footer', // グローバルメニューをここに表示すると指定
+          'container' => '',
+          'menu_class' => 'footer__nav'
+             )
+             );
+        ?>
+          <!--<ul class="footer__nav">
               <li><a class="footer__nav-list" href="">About us</a></li>
               <li><a class="footer__nav-list" href="">Catalog</a></li>
               <li><a class="footer__nav-list" href="">Delivery</a></li>
               <li><a class="footer__nav-list" href="">Contacts</a></li>
-          </ul>
+          </ul>-->
           <div class="footer__small is-pc">
             <small>©2023 cake shop. All Rights Reserved.</small>
           </div>

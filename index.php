@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<section class="top">
 <div class="top__container">
  <div class="top__left">
    <div class="top__text">
@@ -29,7 +28,7 @@
  <div class="top__img">
      <img src="<?php echo get_template_directory_uri() ?>/img/top_img-min.png" alt="">
  </div><!--top__img-->
-</div><!--top-container-->
+ </div><!--top-container-->
 </section><!--top-->
 
 
@@ -74,20 +73,17 @@
 </section>
 
 <section class="news">
-    <ul class="news__items fadeUpTrigger">
-        <li><a href="" class="news__item  fadeIn">
-            <div class="news__item-date">4.23.2023</div>
-            <div class="news__item-title">The title of the news will be entered.The title of the news will be entered.</div>
+    <div class="news__items fadeUpTrigger">
+        <?php if (have_posts()) : // 記事があれば表示 ?>
+        <?php while(have_posts()) : // 記事数分ループ ?>
+        <?php the_post(); ?>
+        <li><a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
+            <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+            <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
         </a></li>
-        <li><a href="" class="news__item  fadeIn">
-            <div class="news__item-date">4.23.2023</div>
-            <div class="news__item-title">The title of the article will be included in the Important Notice.The title of the article will be included in the Important Notice.</div>
-        </a></li>
-        <li><a href="" class="news__item  fadeIn">
-            <div class="news__item-date">4.23.2023</div>
-            <div class="news__item-title">The title of the news will be entered.The title of the news will be entered.</div>
-        </a></li>
-    </ul>
+        <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 </section>
 
 

@@ -138,6 +138,7 @@ img {
 .drawer-menu {
   width: 185px;
   margin: 100px auto;
+  color: #0e0e0e;
 }
 
 .drawer-menu-item {
@@ -1148,5 +1149,109 @@ img {
     right: 20px;
     width: 70px;
   }
+}
+
+.news__top {
+  background: url(../img/Rectangle\ 8-min.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+@media only screen and (min-width: 1700px) {
+  .news__top {
+    height: 600px;
+  }
+}
+.news__top-text {
+  padding: 150px 0;
+  margin: 0 auto;
+  width: 450px;
+  text-align: center;
+}
+.news__top-title {
+  font-size: 55px;
+}
+.news__top-p {
+  font-size: 14px;
+}
+.news__pickUp {
+  width: 80%;
+  margin: 0 auto;
+}
+.news__pickUp-items {
+  display: flex;
+  justify-content: space-between;
+}
+.news__pickUp-item {
+  width: 300px;
+  background: #d6d3d3;
+  height: 250px;
+}
+.news__pickUp-item a {
+  position: relative;
+}
+.news__pickUp-title {
+  font-size: 25px;
+  color: #222222;
+}
+.news__pickUp-thumbnail {
+  width: 300px;
+  height: 250px;
+}
+.news__pickUp-title {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  font-size: 13px;
+  background: #1e1e1e;
+  width: 250px;
+  height: 45px;
+  color: #fff;
+  padding: 14px 19px;
+}
+.news__all {
+  margin: 100px 0;
+}
+.news__all-title {
+  font-size: 50px;
+  text-align: center;
+}
+.news__all-items {
+  margin-top: 70px;
+  width: 70%;
+  margin: 0 auto;
+}
+.news__all-item {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to right, #4a4a4b 1px, transparent 1px);
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.news__all-item-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87%;
+  height: 150px;
+}
+.news__all-item-date {
+  font-size: 14px;
+  color: #F97979;
+}
+.news__all-item-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+.news__all-item-text {
+  font-size: 18px;
+}
+.news__pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 150px;
 }
 /*# sourceMappingURL=style.css.map */
