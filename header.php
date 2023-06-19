@@ -8,6 +8,23 @@
 </head>
 <body>
 <div class="body__border">
+<div class="drawer drawer--right">
+        <!-- ハンバーガーボタン -->
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+        <!-- ナビゲーションの中身 -->
+        <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-brand" href="#">Cake shop</a></li>
+            <li><a class="drawer-menu-item" href="#">Catalog</a></li>
+            <li><a class="drawer-menu-item" href="#">Delivery</a></li>
+            <li><a class="drawer-menu-item" href="#">Contacts</a></li>
+          </ul>
+          <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+        </nav>
+    </div>
 
 <header class="header is-pc">
   <div class="header__logo is-pc">

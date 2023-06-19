@@ -103,7 +103,7 @@ img {
 
 .drawer--right .drawer-hamburger {
     right: 40px;
-    top: 20px;
+    top: 40px;
     @include mq(sm) {
         right: 17px;
         top: 13px;
@@ -953,6 +953,192 @@ width: 100%;
         margin-top: 10px;
         @include mq(sm) {
             color: #929394;
+        }
+    }
+}
+
+
+
+
+
+
+
+.Catalog {
+    &__top {
+        background: url(../img/Rectangle\ 8-min.png)no-repeat;
+        background-size: cover;
+        width: 100%;
+        @media only screen and (min-width: 1700px) {
+            height: 600px;
+        }
+
+
+        &-text {
+            padding: 150px 0;
+            margin: 0 auto;
+            width: 450px;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 55px;
+        }
+
+        &-p {
+            font-size: 14px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-bottom: 150px;
+        background-image : linear-gradient(to right, #b0b0b1 3px, transparent 1px);
+        background-size: 8px 7px;
+        background-repeat: repeat-x;
+        background-position: bottom;
+    }
+
+    &__item {
+        width: 250px;
+        margin-top: 40px;
+
+        &-title {
+            font-weight: 700;
+        }
+
+        &-price {
+            font-size: 12px;
+        }
+
+    }
+
+
+
+    &__NewCakes {
+        width: 100%;
+
+        &-container {
+            display: flex;
+            max-width: 900px;
+            margin: 150px auto;
+        }
+
+        &-circle {
+            position: absolute;
+            top: -43px;
+            left: -38px;
+        }
+    
+        &-circle-text {
+            position:relative;
+            width: 347px; /* 直径 */
+            height: 332px; /* 直径 */
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            transform: rotate(-86deg); /* 円の回転 */
+            color: #F97979;
+        
+        span {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 15px); /* 中心点、、文字サイズ分ずらす */
+            display: inline-block;
+            width: 30px; /* 文字サイズより小さくしない */
+            height: 170px; /* 半径 */
+            transform-origin: center bottom; /* 回転の基準点 */
+        
+        &:nth-child(1) {
+            transform: rotate(50deg);
+        }
+        
+        &:nth-child(2) {
+            transform: rotate(65deg);
+        }
+        
+        &:nth-child(3) {
+            transform: rotate(80deg);
+        }
+        
+        &:nth-child(4) {
+            transform: rotate(92deg);
+        }
+        }
+        }
+
+        &-img {
+            width: 50%;
+
+            &-box {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+            
+
+            img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+
+            }
+        }
+
+        &-right {
+            position: relative;
+            width: 50%;
+        }
+
+        &-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-title {
+            font-size: 55px;
+            margin-top: 70px;
+        }
+
+        &-btn {
+            display: inline-block;
+            width: 200px;
+            padding:10px 30px;
+            color: #fff;
+            position: relative;
+            background: #0e0e0e;
+            border-radius: 4px;
+        
+        
+            @include mq(md) {
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: calc(50% - 5px);
+                    right: 50px;
+                    width: 50px;
+                    height: 5px;
+                    border: none;
+                    border-right: 2px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    transform: skew(45deg);
+                    transition: .3s;
+                }
+            
+                &:hover::after{
+                    right: 20px;
+                    width: 70px;
+                }
+            }
+        
         }
     }
 }

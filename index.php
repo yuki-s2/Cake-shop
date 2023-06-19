@@ -1,53 +1,34 @@
 <?php get_header(); ?>
 
 <section class="top">
-
-    <div class="drawer drawer--right">
-        <!-- ハンバーガーボタン -->
-        <button type="button" class="drawer-toggle drawer-hamburger">
-          <span class="sr-only">toggle navigation</span>
-          <span class="drawer-hamburger-icon"></span>
-        </button>
-        <!-- ナビゲーションの中身 -->
-        <nav class="drawer-nav" role="navigation">
-          <ul class="drawer-menu">
-            <li><a class="drawer-brand" href="#">Cake shop</a></li>
-            <li><a class="drawer-menu-item" href="#">Catalog</a></li>
-            <li><a class="drawer-menu-item" href="#">Delivery</a></li>
-            <li><a class="drawer-menu-item" href="#">Contacts</a></li>
-          </ul>
-          <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
-        </nav>
-    </div>
-
 <div class="top__container">
-<div class="top__left">
-  <div class="top__text">
-    <div class="top__text-title">
-      <h2 class="is-pc">We make cakes<br class="top__br">
-          to order.</h2>
-      <h1 class="is-sp">Cake shop</h1>
-    </div>
-    <div class="top__text-title-sub">
-      <p class="top__text-title-sub-p">Customize your cake to your liking.</p>
-      <p class="is-sp">Made to order</p>
-    </div>
-  </div><!--top__text-->
-  <div class="top__sns">
-      <div class="top__sns-facebook">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-      </div>
-      <div class="top__sns-twitter">
-        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-      </div>
-      <div class="top__sns-instagram">
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-      </div>
-  </div><!--top__sns-->
-</div><!--top__left-->
-<div class="top__img">
-    <img src="<?php echo get_template_directory_uri() ?>/img/top_img-min.png" alt="">
-</div><!--top__img-->
+ <div class="top__left">
+   <div class="top__text">
+     <div class="top__text-title">
+       <h2 class="is-pc">We make cakes<br class="top__br">
+           to order.</h2>
+       <h1 class="is-sp">Cake shop</h1>
+     </div>
+     <div class="top__text-title-sub">
+       <p class="top__text-title-sub-p">Customize your cake to your liking.</p>
+       <p class="is-sp">Made to order</p>
+     </div>
+   </div><!--top__text-->
+   <div class="top__sns">
+       <div class="top__sns-facebook">
+         <a href=""><i class="fa-brands fa-facebook"></i></a>
+       </div>
+       <div class="top__sns-twitter">
+         <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+       </div>
+       <div class="top__sns-instagram">
+         <a href=""><i class="fa-brands fa-instagram"></i></a>
+       </div>
+   </div><!--top__sns-->
+ </div><!--top__left-->
+ <div class="top__img">
+     <img src="<?php echo get_template_directory_uri() ?>/img/top_img-min.png" alt="">
+ </div><!--top__img-->
 </div><!--top-container-->
 </section><!--top-->
 
