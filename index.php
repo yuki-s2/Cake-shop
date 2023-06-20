@@ -74,15 +74,35 @@
 
 <section class="news">
     <div class="news__items fadeUpTrigger">
-        <?php if (have_posts()) : // 記事があれば表示 ?>
-        <?php while(have_posts()) : // 記事数分ループ ?>
-        <?php the_post(); ?>
-        <li><a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
-            <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-            <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
-        </a></li>
-        <?php endwhile; ?>
-        <?php endif; ?>
+
+    <?php
+    $args = array (
+        'post_type'      => 'post', // 投稿タイプ
+        'posts_per_page' => 3, // 取得する投稿数
+    );
+    $myposts = get_posts( $args );
+    foreach( $myposts as $post ):
+    setup_postdata($post); // グローバル変数$postを書き換え
+?>
+       <li><a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
+           <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+           <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
+       </a></li>
+<!-- 繰り返し処理する内容 -->
+<?php
+    endforeach;
+    wp_reset_postdata(); // $postをグローバル変数に戻す
+?>
+
+       <//?php if (have_posts()) : // 記事があれば表示 ?>
+       <//?php while(have_posts()) : // 記事数分ループ ?>
+       <//?php the_post(); ?>
+       <!--<li><a href="<//?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
+           <time class="news__item-date" datetime="<//?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+           <div class="news__item-title"><//?php the_title(); // タイトルを表示 ?></div>
+       </a></li>
+       <//?php endwhile; ?>
+       <//?php endif; ?>-->
     </div>
 </section>
 

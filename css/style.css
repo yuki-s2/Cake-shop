@@ -1229,6 +1229,10 @@ img {
   background-repeat: repeat-x;
   background-position: bottom;
 }
+.news__all-item-a {
+  color: #222222;
+  display: inline-block;
+}
 .news__all-item-box {
   position: absolute;
   top: 20%;
@@ -1253,5 +1257,86 @@ img {
   justify-content: space-between;
   margin: 30px auto;
   width: 150px;
+}
+
+.single__top {
+  background: url(../img/Rectangle\ 8-min.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+@media only screen and (min-width: 1700px) {
+  .single__top {
+    height: 600px;
+  }
+}
+.single__top-text {
+  padding: 150px 0;
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+.single__top-title {
+  font-size: 55px;
+}
+.single__meta {
+  color: #7E7A7A;
+  font-size: 10px;
+}
+.single__published {
+  padding: 0 15px;
+}
+.single__updated {
+  padding: 0 20px;
+}
+.single__main {
+  width: 80%;
+  margin: 0 auto;
+}
+.single__body {
+  width: 80%;
+  margin: 70px auto;
+}
+.single__body h2 {
+  font-size: 45px;
+  margin: 80px 0 10px;
+  padding-left: 20px;
+  border-left: 8px solid #F97979;
+  line-height: 1em;
+  font-weight: 700;
+}
+.single__body h3 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.single__body h4 {
+  font-size: 25px;
+  margin-top: 40px;
+}
+.single__pagination {
+  margin: 100px auto;
+  display: flex;
+  width: 480px;
+  text-align: center;
+  align-items: center;
+}
+.single__pagination i {
+  margin: 0 20px;
+}
+.single__pagination-prev {
+  color: #222222;
+  width: 150px;
+  font-size: 12px;
+}
+.single__pagination-list {
+  color: #222222;
+  margin: 0 40px;
+  border: 0.5px solid #0e0e0e;
+  width: 100px;
+}
+.single__pagination-next {
+  color: #222222;
+  width: 150px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

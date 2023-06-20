@@ -1237,6 +1237,11 @@ width: 100%;
             background-repeat: repeat-x;
             background-position: bottom;
 
+            &-a {
+                color: $text-color;
+                display: inline-block;
+            }
+
             &-box {
                 position: absolute;
                 top: 20%;
@@ -1272,4 +1277,104 @@ width: 100%;
         width: 150px;
 
     }
+}
+
+.single {
+    &__top {
+        background: url(../img/Rectangle\ 8-min.png)no-repeat;
+        background-size: cover;
+        width: 100%;
+        @media only screen and (min-width: 1700px) {
+            height: 600px;
+        }
+
+        &-text {
+            padding: 150px 0;
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 55px;
+        }
+    }
+
+    &__meta {
+        color: #7E7A7A;
+        font-size: 10px;
+    }
+
+
+    &__published {
+        padding: 0 15px;
+    }
+
+    &__updated {
+        padding: 0 15px;
+    }
+
+    &__main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__body {
+        width: 80%;
+        margin: 70px auto;
+
+        h2 {
+            font-size: 45px;
+            margin: 80px 0 10px;
+            padding-left: 20px;
+            border-left: 8px solid #F97979;
+            line-height: 1em;
+            font-weight: 700;
+
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        h4 {
+            font-size: 25px;
+            margin-top: 40px;
+        }
+
+    }
+
+    &__pagination {
+        margin: 100px auto;
+        display: flex;
+        width: 480px;
+        text-align: center;
+        align-items: center;
+
+        i {
+            margin: 0 20px;
+        }
+
+        &-prev {
+            color: $text-color;
+            width: 150px;
+            font-size: 12px;
+        }
+
+        &-list {
+            color: $text-color;
+            margin: 0 40px;
+            border: 0.5px solid #0e0e0e;
+            width: 100px;
+        }
+
+        &-next {
+            color: $text-color;
+            width: 150px;
+            font-size: 12px;
+        }
+    }
+
 }
