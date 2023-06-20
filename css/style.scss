@@ -100,6 +100,12 @@ img {
 }
   
 
+.search-submit {
+    border: none;
+    background: url(img/img/Group.svg) center center / cover;
+
+}
+
 
 .drawer--right .drawer-hamburger {
     right: 40px;
@@ -1376,5 +1382,105 @@ width: 100%;
             font-size: 12px;
         }
     }
+
+}
+
+.search {
+    &__top {
+        background: url(../img/Rectangle\ 8-min.png)no-repeat;
+        background-size: cover;
+        width: 100%;
+        @media only screen and (min-width: 1700px) {
+            height: 600px;
+        }
+
+
+        &-text {
+            padding: 150px 0;
+            margin: 0 auto;
+            width: 550px;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 55px;
+        }
+
+        &-p {
+            font-size: 14px;
+        }
+    }
+ 
+}
+
+.cake {
+    &__top {
+        background: url(../img/Rectangle\ 8-min.png)no-repeat;
+        background-size: cover;
+        width: 100%;
+        @media only screen and (min-width: 1700px) {
+            height: 600px;
+        }
+
+        &-text {
+            padding: 150px 0;
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 55px;
+        }
+    }
+
+    &__main {
+        width: 80%;
+        margin:  0 auto;
+
+        &-imgH {
+            max-width: 700px;
+            margin: 0 auto;
+
+        }
+
+        &-details {
+            margin: 100px auto;
+            max-width: 1200px;
+            aspect-ratio: 5 / 3;
+            display: flex;
+            justify-content: space-between;
+
+            &-left {
+                position: relative;
+                width: 40%;
+            }
+
+            &-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY( -50% );
+                max-width: 400px;
+                }
+            
+
+            &-right {
+                position: relative;
+                width: 60%;
+                height: 100%;
+            }
+
+            &-text {
+                position: absolute;
+                top: 50%;
+                transform: translateY( -50% );
+                text-align: center;
+                max-width: 700px;
+                font-size: 25px;
+                margin-left: 50px;
+            }
+        }
+    }
+
 
 }

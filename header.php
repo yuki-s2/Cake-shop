@@ -61,7 +61,7 @@
   </nav>
 
   <div class="header__icon is-pc">
-    <div class="header__icon-search is-pc"><img src="<?php echo get_template_directory_uri() ?>/img/Group.svg" alt="検索"></div>
+    <div class="header__icon-search is-pc"><?php get_search_form(); ?><img src="<?php echo get_template_directory_uri() ?>/img/Group.svg" alt="検索"></div>
     <div class="header__icon-basket is-pc"><img src="<?php echo get_template_directory_uri() ?>/img/GroupB.svg" alt="買い物かご"></div>
   </div>
 </header>

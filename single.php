@@ -14,6 +14,9 @@
 </section>
 
 <section class="single__main">
+<?php if (have_posts()) : // 記事があれば表示 ?>
+<?php while(have_posts()) : // 記事数分ループ ?>
+<?php the_post(); ?>
     <div class="single__thumbnail">
       <?php the_post_thumbnail('large'); ?>
     </div><!-- single__thumbnail -->
@@ -21,7 +24,6 @@
     <div class="single__body">
     <?php the_content(); // 本文の表示 ?>
     </div>
-
       <div class="single__pagination">
         <?php previous_post_link('%link', '<div class="single__pagination-prev"><i class="fa-solid fa-angles-left"></i>PREV</div>'); ?>
         <?php
@@ -30,7 +32,8 @@
                    <a href="<?php echo get_category_link($category[0]->term_id); ?>" class="single__pagination-list">NEWS</a>
                    <?php endif; ?>
         <?php next_post_link('%link', '<div class="single__pagination-next">NEXT<i class="fa-solid fa-angles-right"></i></div>'); ?>
-      
+<?php endwhile; ?>
+<?php endif; ?>
 </section>
 
 
