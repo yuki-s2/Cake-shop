@@ -32,7 +32,16 @@
             <li><a class="drawer-menu-item" href="#">Delivery</a></li>
             <li><a class="drawer-menu-item" href="#">Contacts</a></li>
           </ul>-->
-          <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a>
+          <div class="drawer-icon">
+          <div class="searchFromMini drawer-search">
+           <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" id="search-formmini">
+              <input type="hidden">
+              <input type="search" id="search-field" autocomplete="off" class="search-field" name="s" value="">
+              <button class="search-submit"><i class="fa fa-search drawer-searchIcon"></i></button>
+           </form>
+          </div>
+          <div class="drawer-icon-basket"><img src="<?php echo get_template_directory_uri() ?>/img/GroupB.svg" alt="買い物かご"></div>
+          </div><!--drawer__icon-->
         </nav>
     </div>
 
@@ -61,7 +70,14 @@
   </nav>
 
   <div class="header__icon is-pc">
-    <div class="header__icon-search is-pc"><?php get_search_form(); ?><img src="<?php echo get_template_directory_uri() ?>/img/Group.svg" alt="検索"></div>
+  <div class="searchFromMini is-pc">
+    <form class="is-pc" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" id="search-formmini">
+      <input type="hidden">
+      <input type="search" id="search-field" autocomplete="off" class="search-field" name="s" value="">
+     <button class="search-submit is-pc"><i class="fa fa-search"></i></button>
+    </form>
+   </div>
+    <!--<div class="header__icon-search is-pc"><//?php get_search_form(); ?><img src="<?php echo get_template_directory_uri() ?>/img/Group.svg" alt="検索"></div>-->
     <div class="header__icon-basket is-pc"><img src="<?php echo get_template_directory_uri() ?>/img/GroupB.svg" alt="買い物かご"></div>
   </div>
 </header>

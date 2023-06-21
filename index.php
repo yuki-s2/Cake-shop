@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-
-<div class="top__container">
+<section class="top">
+ <div class="top__container">
  <div class="top__left">
    <div class="top__text">
      <div class="top__text-title">
@@ -66,7 +66,7 @@
     </div>
     <ul class="slider slide">
         <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 6-min.png" alt=""><p class="service__title">Customize</p></a></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 5-min.png" alt=""><p class="service__title">Regular menu</p></a></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 5-min.jpeg" alt=""><p class="service__title">Regular menu</p></a></li>
         <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 7-min.png" alt=""><p class="service__title">Delivery</p></a></li>
         <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 6.png" alt=""><p class="service__title">Shop</p></a></li>
         </ul><!--/slider-->
@@ -74,7 +74,6 @@
 
 <section class="news">
     <div class="news__items fadeUpTrigger">
-
     <?php
     $args = array (
         'post_type'      => 'post', // 投稿タイプ
@@ -83,16 +82,16 @@
     $myposts = get_posts( $args );
     foreach( $myposts as $post ):
     setup_postdata($post); // グローバル変数$postを書き換え
-?>
-       <li><a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
-           <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-           <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
-       </a></li>
-<!-- 繰り返し処理する内容 -->
-<?php
+      ?>
+        <a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
+         <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
+         <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
+        </a>
+    <!-- 繰り返し処理する内容 -->
+    <?php
     endforeach;
     wp_reset_postdata(); // $postをグローバル変数に戻す
-?>
+    ?>
 
        <//?php if (have_posts()) : // 記事があれば表示 ?>
        <//?php while(have_posts()) : // 記事数分ループ ?>
@@ -144,7 +143,7 @@
             </div><!--gallery__left-lower-->
         </div><!--gallery__container-left-->
         <div class="gallery__container-right">
-            <img src="<?php echo get_template_directory_uri() ?>/img/Frame 11-min.png" alt="/">
+            <img src="<?php echo get_template_directory_uri() ?>/img/ストロベリー.jpeg" alt="/">
         </div>
     </div><!--gallery__container-->
 </section>

@@ -100,11 +100,11 @@ img {
 }
   
 
-.search-submit {
-    border: none;
-    background: url(img/img/Group.svg) center center / cover;
-
-}
+//.search-submit {
+//    border: none;
+//    background: url(img/img/Group.svg) center center / cover;
+//
+//}
 
 
 .drawer--right .drawer-hamburger {
@@ -112,16 +112,14 @@ img {
     top: 40px;
     @include mq(sm) {
         right: 17px;
-        top: 13px;
         }
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
     right: 40px;
-    top: 20px;
+    top: 40px;
     @include mq(sm) {
         right: 17px;
-        top: 13px;
         }
 }
 
@@ -138,17 +136,30 @@ img {
     }
 }
 
-.drawer-brand {
-    text-align: center;
-    display: block;
-    font-size: 28px;
-    border-bottom: 0.5px solid #d8d8d9;
-    color: #d8d8d9;
+.drawer-icon {
+&-basket {
+    text-align: right;
+    margin: 15px 102px 0 0;
+    @include mq(sm) {
+        margin: 15px 64px 0 0;
+    }
+    img {
+        width: 24px;
+    }
 }
+}
+
+//.drawer-brand {
+//    text-align: center;
+//    display: block;
+//    font-size: 28px;
+//    border-bottom: 0.5px solid #d8d8d9;
+//    color: #d8d8d9;
+//}
 
 .drawer-menu {
     width: 185px;
-    margin: 100px auto;
+    margin: 100px auto 30px;
     color: #0e0e0e;
 }
 
@@ -157,6 +168,9 @@ img {
     font-size: 19px;
     padding: 10px 0;
     color: #d8d8d9;
+    a {
+        color: #888889;
+    }
 }
 
 
@@ -214,6 +228,13 @@ img {
     transform: rotate(45deg);
 }
 
+.slick-next:before {
+    display: none;
+}
+
+.slick-prev:before {
+    display: none;
+}
 
 
 .header {
@@ -269,7 +290,9 @@ img {
         
         &-item {
             font-size: 18px;
-            color: $text-color;
+            a {
+                color: $text-color;
+            }
             &:hover {
             border-bottom: 3px solid #F97979;
             padding-top: 3px;
@@ -286,24 +309,14 @@ img {
         margin-right: 15px;
         @media only screen and (max-width: 900px) {
             width: calc((100% - 370px) / 2);
-        }
-
-        &-search {
-            width: 30px;
-            @media only screen and (max-width: 900px) {
-                width: 18px;
-            }
-
+        
         }
                 
         &-basket {
-            margin-left: 30px;
-            padding-bottom: 16px;
+            padding-bottom: 2px;
             width: 37px;
             @media only screen and (max-width: 900px) {
                 width: 22px;
-                margin-left: 20px;
-
             }
 
         }
@@ -560,7 +573,6 @@ width: 100%;
     }
 
     &__item {
-        display: flex;
         width: 100%;
         height: 100px;
         align-items: center;
@@ -568,8 +580,14 @@ width: 100%;
         background-size: 5px 1px;
         background-repeat: repeat-x;
         background-position: bottom;
+        @include mq(md) {
+            display: flex;
+        }
         @include mq(sm) {
-            display: initial;
+            height: 80px;
+            &:not(:first-child) {
+            margin-top: 30px;
+            }
         }
 
         &-date {
@@ -593,10 +611,6 @@ width: 100%;
                 font-size: 18px;
                 line-height: 24px;
                 padding-bottom: 10px;
-                background-image : linear-gradient(to right, #4a4a4b 1px, transparent 1px);
-                background-size: 5px 1px;
-                background-repeat: repeat-x;
-                background-position: bottom;
             }
         }
     }
@@ -902,8 +916,10 @@ width: 100%;
         }
 
         &-list {
-            color: $text-color;
             font-size: 15px;
+            a {
+                color: $text-color;
+            }
             @include mq(sm) {
                 font-size: 14px;
                 letter-spacing: 0.04em;
@@ -963,12 +979,6 @@ width: 100%;
         }
     }
 }
-
-
-
-
-
-
 
 .Catalog {
     &__top {
@@ -1150,10 +1160,7 @@ width: 100%;
     }
 }
 
-
-
-
-.news {
+.newsPage {
     &__top {
         background: url(../img/Rectangle\ 8-min.png)no-repeat;
         background-size: cover;
@@ -1166,50 +1173,83 @@ width: 100%;
         &-text {
             padding: 150px 0;
             margin: 0 auto;
-            width: 450px;
             text-align: center;
+            @include mq(md) {
+                width: 450px;
+            }
+            @include mq(sm) {
+                padding: 70px 0 0;
+            }
         }
 
         &-title {
             font-size: 55px;
+            @include mq(sm) {
+                font-size: 45px;
+            }
         }
 
         &-p {
             font-size: 14px;
+            @include mq(sm) {
+                font-size: 12px;
+                width: 250px;
+                margin: 0 auto;
+            }
         }
     }
 
     &__pickUp {
         width: 80%;
         margin: 0 auto;
+        @media only screen and (max-width: 1100px) {
+            width: 90%;
+        }
+
+        &-box {
+            position: relative;
+            @media only screen and (max-width: 1030px) {
+                width: 300px;
+                margin: 80px auto;
+            }
+
+        }
 
         &-items {
-            display: flex;
-            justify-content: space-between;
+            @media only screen and (min-width: 1031px) {
+                display: flex;
+                justify-content: space-between;
+            }
+
         }
 
         &-item {
             width: 300px;
-            background: #d6d3d3;
             height: 250px;
             a {
-                position: relative;
+                @media only screen and (max-width: 1030px) {
+                    height: 200px;
             }
-        }
-
-        &-title {
-            font-size: 25px;
-            color: $text-color;
+            }
         }
 
         &-thumbnail {
             width: 300px;
             height: 250px;
+            @media only screen and (max-width: 1030px) {
+                height: 200px;
+            }
+            img {
+                object-fit: cover;
+                @media only screen and (max-width: 1030px) {
+                    height: 200px;
+                }
+            }
         }
 
         &-title {
             position: absolute;
-            bottom: 0;
+            bottom: -17px;
             left: 25px;
             font-size: 13px;
             background: #1e1e1e;
@@ -1222,6 +1262,9 @@ width: 100%;
 
     &__all {
         margin: 100px 0;
+        @include mq(sm) {
+            margin: 150px 0 70px;
+        }
 
         &-title {
             font-size: 50px;
@@ -1230,8 +1273,11 @@ width: 100%;
 
         &-items {
             margin-top: 70px;
-            width: 70%;
             margin: 0 auto;
+            width: 70%;
+            @media only screen and (max-width: 1250px) {
+                width: 90%;
+            }
         }
 
         &-item {
@@ -1242,6 +1288,9 @@ width: 100%;
             background-size: 5px 1px;
             background-repeat: repeat-x;
             background-position: bottom;
+            @media only screen and (max-width: 980px) {
+                height: 275px;
+            }
 
             &-a {
                 color: $text-color;
@@ -1250,25 +1299,42 @@ width: 100%;
 
             &-box {
                 position: absolute;
-                top: 20%;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 87%;
-                height: 150px;
+                @include mq(md) {
+                    top: 20%;
+                    height: 150px;
+                }
+                @include mq(sm) {
+                    width: 97%;
+                    bottom: 30px;
+                }
             }
 
             &-date {
                 font-size: 14px;
                 color: #F97979;
+                @include mq(sm) {
+                    font-size: 10px;
+                }
             }
 
             &-title {
                 font-size: 25px;
                 font-weight: 700;
+                @include mq(sm) {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
             }
 
             &-text {
                 font-size: 18px;
+                @include mq(sm) {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
             }
         }
 
@@ -1281,9 +1347,14 @@ width: 100%;
         justify-content: space-between;
         margin: 30px auto;
         width: 150px;
-
+        color: $text-color;
+        a {
+            color: $text-color;
+        }
     }
 }
+
+
 
 .single {
     &__top {
@@ -1323,6 +1394,12 @@ width: 100%;
     &__main {
         width: 80%;
         margin: 0 auto;
+    }
+
+    &__thumbnail {
+        img {
+        object-fit: cover;
+        }
     }
 
     &__body {
@@ -1483,4 +1560,179 @@ width: 100%;
     }
 
 
+}
+
+.contact {
+    &__top {
+        background: url(../img/Rectangle\ 8-min.png)no-repeat;
+        background-size: cover;
+        width: 100%;
+        @media only screen and (min-width: 1700px) {
+            height: 600px;
+        }
+
+
+        &-text {
+            padding: 150px 0;
+            margin: 0 auto;
+            width: 450px;
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 55px;
+        }
+
+        &-p {
+            font-size: 14px;
+        }
+    }
+
+    &__text {
+        color: black;
+    }
+
+    &__form {
+        position: relative;
+        height: 750px;
+        background: url(../img/s246_margaret-bluegray.jpg)no-repeat center center / cover;
+        opacity: 0.4;
+        &-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        width: 400px;
+        padding: 20px 30px 0;
+        background: #fff;
+        }
+    }
+
+    &__email {
+       border: 0.5px solid #0e0e0e;
+       height: 30px;
+       background: #fff;
+    }
+
+    &__name {
+        border: 0.5px solid #0e0e0e;
+        height: 30px;
+       background: #fff;
+    }
+
+    &__message {
+        width: 334px;
+        border: 0.5px solid #0e0e0e;
+    }
+}
+
+input[type=submit] {
+    width: 100px;
+    padding: 4px;
+    height: 30px;
+    margin: 25px auto 0;
+    display: block;
+}
+
+/* Search */
+.fa-search {
+font-size: 30px;
+color: #7c7c7c;
+width: 37px;
+@media only screen and (max-width: 900px) {
+    font-size: 22px;
+}
+}
+.drawer-searchIcon {
+    font-size: 20px;
+}
+
+.searchFromMini {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+#search-formmini {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1;
+	height: 53px;
+}
+
+.search-field {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  box-sizing: border-box;
+  color: $text-color;
+  cursor: pointer;
+  font-weight: 300;
+  opacity: 0;
+  width: 0;
+  z-index: 3;
+}
+.search-field:focus {
+    cursor: text;
+    opacity: 1;
+    outline: none;
+    width: 100%;
+    z-index: 1;
+    background: #FFF;
+    border-radius: 9999px;
+    padding-left: 20px;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 11%);
+    line-height: 1.2;
+}
+.search-field:focus:hover ~ .search-submit .fa-search {
+  color: #7c7c7c;
+}
+.search-field:hover ~ .search-submit .fa-search {
+  color: #7c7c7c;
+}
+
+.search-submit {
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    height: 100%;
+    color:  #7c7c7c;
+    border: none;
+}
+.search-submit:hover .fa-search {
+  color: #7c7c7c;
+}
+form#search-formmini input[type="search"] {
+    width: 40px;
+    position: relative;
+	 transition: all 0.5s ease-in-out;
+	 margin: 0;
+	 height: 50px;
+}
+form#search-formmini input[type="search"]:focus {
+    width: 220px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    @include mq(sm) {
+        width: 200px;
+    }
+}
+form#search-formmini input[type="search"]:focus ~ .search-submit {
+    right: 14px;
+    color: #6bb6ff;
+}
+.drawer-search {
+height: 40px;
+width: 300px;
+@include mq(sm) {
+    width: 228px;
+}
 }

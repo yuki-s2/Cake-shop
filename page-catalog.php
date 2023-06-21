@@ -15,28 +15,28 @@
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
         <div class="Catalog__item">
-            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt=""></div>
-            <h3 class="Catalog__item-title">Blueberry</h3>
+        <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (3)-min.png" alt=""></div>
+            <h3 class="Catalog__item-title">Rainbow</h3>
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
         <div class="Catalog__item">
-            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt=""></div>
-            <h3 class="Catalog__item-title">Blueberry</h3>
+            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16-min.png" alt=""></div>
+            <h3 class="Catalog__item-title">Orange</h3>
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
         <div class="Catalog__item">
-            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt=""></div>
-            <h3 class="Catalog__item-title">Blueberry</h3>
+            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (4)-min.png" alt=""></div>
+            <h3 class="Catalog__item-title">Strawberry</h3>
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
         <div class="Catalog__item">
-            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt=""></div>
-            <h3 class="Catalog__item-title">Blueberry</h3>
+            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16チョコ.png" alt=""></div>
+            <h3 class="Catalog__item-title">Chocolate</h3>
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
         <div class="Catalog__item">
-            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt=""></div>
-            <h3 class="Catalog__item-title">Blueberry</h3>
+            <div class="Catalog__item-img"><img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (1)-min.png" alt=""></div>
+            <h3 class="Catalog__item-title">Flower</h3>
             <div class="Catalog__item-price">3,000円</div>
         </div><!--Catalog__item-->
     </div>
