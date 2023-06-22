@@ -19,7 +19,7 @@
     <div class="cake__main-details-right">
       <div class="cake__main-details-text">
         <p><?php $page_data = get_page_by_path('cake'); $page = get_post($page_data);
-$content = $page -> post_content;
+         $content = $page -> post_content;
 
 // HTMLタグを除外した上で本文を表示する
 echo strip_tags($content); ?></p>

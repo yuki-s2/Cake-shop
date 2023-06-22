@@ -11,9 +11,9 @@
     <ul class="newsPage__pickUp-items">
     <?php $pickup_query = new WP_Query(
       array(
-        'post_type'      => 'post',
-        'tag'            => 'pickup',
-        'posts_per_page' => 3
+        'post_type'      => 'post', // 投稿タイプ
+        'tag'            => 'pickup', // pickupタグがついたものを 
+        'posts_per_page' => 3 // 3件取得
       )
     );
     ?>
@@ -45,15 +45,15 @@
 <section class="newsPage__all">
   <div class="newsPage__all-title">Notice</div>
   <div class="newsPage__all-items">
-  <?php if (have_posts()) : ?>
-  <?php while(have_posts()) : ?>
+  <?php if (have_posts()) : // 記事があれば表示 ?>
+  <?php while(have_posts()) : // 記事数分ループ ?>
   <?php the_post(); ?>
     <div class="newsPage__all-item">
       <div class="newsPage__all-item-box">
-       <a href="<?php the_permalink();  ?>" class="newsPage__all-item-a">
+       <a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="newsPage__all-item-a">
         <time class="newsPage__all-item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
         <div class="newsPage__all-item-title"><?php echo mb_substr( $post->post_title, 0, 45) . '...'; ?></div>
-        <div class="newsPage__all-item-text"><?php the_excerpt(); ?></div>
+        <div class="newsPage__all-item-text"><?php the_excerpt(); // 抜粋を表示 ?></div>
        </a>
       </div><!--news__all-item-box-->
     </div><!--news__all-item-->
@@ -61,7 +61,7 @@
   <?php endif; ?>
   </div><!--news__all-items-->
 
-  <?php if(paginate_links()) : ?>
+  <?php if(paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
   <!-- pagination -->
   <div class="newsPage__pagination">
   <?php

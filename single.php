@@ -14,15 +14,15 @@
 </section>
 
 <section class="single__main">
-<?php if (have_posts()) : // 記事があれば表示 ?>
-<?php while(have_posts()) : // 記事数分ループ ?>
+<?php if (have_posts()) : ?>
+<?php while(have_posts()) :  ?>
 <?php the_post(); ?>
     <div class="single__thumbnail">
       <?php the_post_thumbnail('large'); ?>
     </div><!-- single__thumbnail -->
 
     <div class="single__body">
-    <?php the_content(); // 本文の表示 ?>
+    <?php the_content(); ?>
     </div>
       <div class="single__pagination">
         <?php previous_post_link('%link', '<div class="single__pagination-prev"><i class="fa-solid fa-angles-left"></i>PREV</div>'); ?>

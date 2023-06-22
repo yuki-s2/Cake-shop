@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__logo-box">
-            <p class="footer__logo">Cake shop</p>
+            <a href="<?php echo home_url( '/' );?>" class="footer__logo"> Cake shop</a>
             <p class="footer__logo-sub">Made to order</p>
         </div><!--footer__logo-->
         <div class="footer__middle">
@@ -9,18 +9,12 @@
         wp_nav_menu(
         array(
           'depth' => 1,
-          'theme_location' => 'footer', // グローバルメニューをここに表示すると指定
+          'theme_location' => 'footer',
           'container' => '',
           'menu_class' => 'footer__nav'
              )
              );
         ?>
-          <!--<ul class="footer__nav">
-              <li><a class="footer__nav-list" href="">About us</a></li>
-              <li><a class="footer__nav-list" href="">Catalog</a></li>
-              <li><a class="footer__nav-list" href="">Delivery</a></li>
-              <li><a class="footer__nav-list" href="">Contacts</a></li>
-          </ul>-->
           <div class="footer__small is-pc">
             <small>©2023 cake shop. All Rights Reserved.</small>
           </div>

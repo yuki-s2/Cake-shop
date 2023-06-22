@@ -4,8 +4,8 @@
  <div class="top__left">
    <div class="top__text">
      <div class="top__text-title">
-       <h2 class="is-pc">We make cakes<br class="top__br">
-           to order.</h2>
+       <h2 class="is-pc">We make your cake<br class="top__br">
+       upon reservation.</h2>
        <h1 class="is-sp">Cake shop</h1>
      </div>
      <div class="top__text-title-sub">
@@ -76,39 +76,37 @@
     <div class="news__items fadeUpTrigger">
     <?php
     $args = array (
-        'post_type'      => 'post', // 投稿タイプ
-        'posts_per_page' => 3, // 取得する投稿数
+        'post_type'      => 'post', 
+        'posts_per_page' => 3, 
     );
     $myposts = get_posts( $args );
     foreach( $myposts as $post ):
-    setup_postdata($post); // グローバル変数$postを書き換え
+    setup_postdata($post); 
       ?>
-        <a href="<?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
+        <a href="<?php the_permalink(); ?>" class="news__item  fadeIn">
          <time class="news__item-date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-         <div class="news__item-title"><?php the_title(); // タイトルを表示 ?></div>
+         <div class="news__item-title"><?php the_title(); ?></div>
         </a>
     <!-- 繰り返し処理する内容 -->
     <?php
     endforeach;
-    wp_reset_postdata(); // $postをグローバル変数に戻す
+    wp_reset_postdata();
     ?>
-
-       <//?php if (have_posts()) : // 記事があれば表示 ?>
-       <//?php while(have_posts()) : // 記事数分ループ ?>
-       <//?php the_post(); ?>
-       <!--<li><a href="<//?php the_permalink();  // 記事のリンクを表示 ?>" class="news__item  fadeIn">
-           <time class="news__item-date" datetime="<//?php the_time('c'); ?>"><?php the_time('Y/n/j'); ?></time>
-           <div class="news__item-title"><//?php the_title(); // タイトルを表示 ?></div>
-       </a></li>
-       <//?php endwhile; ?>
-       <//?php endif; ?>-->
+    </div>
+    
+    <div class="news__btn">
+    <?php
+        $category = get_the_category();
+        if($category[0]) : ?>
+      <a href="<?php echo get_category_link($category[0]->term_id); ?>" class="news__btn-a">News<i class="fas fa-angle-right news__btn-arrow"></i></a>
+      <?php endif; ?>
     </div>
 </section>
 
 
 <section class="gallery fade">
     <div class="section__title-box">
-        <h3 class="section__title"><span>/&nbsp;</span>Gallery</h3>
+        <a href="<?php echo home_url('/catalog/'); ?>" class="section__title-a"><h3 class="section__title"><span>/&nbsp;</span>Gallery</h3></a>
         <p class="section__title-sub">This is a standard popular menu item.</p>
     </div>
     <div class="gallery__container">
@@ -143,7 +141,7 @@
             </div><!--gallery__left-lower-->
         </div><!--gallery__container-left-->
         <div class="gallery__container-right">
-            <img src="<?php echo get_template_directory_uri() ?>/img/ストロベリー.jpeg" alt="/">
+            <img src="<?php echo get_template_directory_uri() ?>/img/Frame 11-min.jpeg" alt="/">
         </div>
     </div><!--gallery__container-->
 </section>

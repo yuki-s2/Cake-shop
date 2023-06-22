@@ -20,18 +20,12 @@
           wp_nav_menu(
           array(
           'depth' => 1,
-          'theme_location' => 'drawer', // ドロワーメニューをここに表示すると指定
+          'theme_location' => 'drawer',
           'container' => '',
           'menu_class' => 'drawer-menu'
            )
            );
         ?>
-         <!-- <ul class="drawer-menu">
-            <li><a class="drawer-brand" href="#">Cake shop</a></li>
-            <li><a class="drawer-menu-item" href="#">Catalog</a></li>
-            <li><a class="drawer-menu-item" href="#">Delivery</a></li>
-            <li><a class="drawer-menu-item" href="#">Contacts</a></li>
-          </ul>-->
           <div class="drawer-icon">
           <div class="searchFromMini drawer-search">
            <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" id="search-formmini">
@@ -55,18 +49,12 @@
       wp_nav_menu(
         array(
           'depth' => 1,
-          'theme_location' => 'global', // グローバルメニューをここに表示すると指定
+          'theme_location' => 'global', 
           'container' => '',
           'menu_class' => 'header__nav-list'
         )
       );
     ?>
-    <!--<ul class="header__nav-list">
-        <li><a href="#" class="header__nav-item">Home</a></li>
-        <li><a href="#" class="header__nav-item">Catalog</a></li>
-        <li><a href="#" class="header__nav-item">Delivery</a></li>
-        <li><a href="#" class="header__nav-item">Contacts</a></li>
-    </ul>-->
   </nav>
 
   <div class="header__icon is-pc">
@@ -77,7 +65,6 @@
      <button class="search-submit is-pc"><i class="fa fa-search"></i></button>
     </form>
    </div>
-    <!--<div class="header__icon-search is-pc"><//?php get_search_form(); ?><img src="<?php echo get_template_directory_uri() ?>/img/Group.svg" alt="検索"></div>-->
     <div class="header__icon-basket is-pc"><img src="<?php echo get_template_directory_uri() ?>/img/GroupB.svg" alt="買い物かご"></div>
   </div>
 </header>
