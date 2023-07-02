@@ -801,6 +801,7 @@ form#search-formmini input[type=search]:focus ~ .search-submit {
   }
 }
 .gallery__container-right {
+  display: none;
   width: 38%;
 }
 @media screen and (min-width: 768px) {
@@ -835,6 +836,10 @@ form#search-formmini input[type=search]:focus ~ .search-submit {
 }
 .gallery__item {
   width: 140px;
+  cursor: pointer;
+}
+.gallery__item .is-active {
+  border: 3px solid #F97979;
 }
 @media screen and (max-width: 767px) {
   .gallery__item {

@@ -779,6 +779,7 @@ width: 100%;
         }
 
         &-right {
+            display: none;
             width: 38%;
             @include mq(md) {
                 height: 362px;
@@ -818,6 +819,10 @@ width: 100%;
 
     &__item {
         width: 140px;
+        cursor: pointer;
+        .is-active {
+            border: 3px solid #F97979;
+        }
         @include mq(sm) {
             width: 92px;
         }

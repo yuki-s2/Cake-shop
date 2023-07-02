@@ -109,39 +109,54 @@
         <a href="<?php echo home_url('/catalog/'); ?>" class="section__title-a"><h3 class="section__title"><span>/&nbsp;</span>Gallery</h3></a>
         <p class="section__title-sub">This is a standard popular menu item.</p>
     </div>
-    <div class="gallery__container">
+    <div class="gallery__container" id="js-tab">
         <div class="gallery__container-left">
             <div class="gallery__left-upper">
                 <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (1)-min.png" alt="/">
+                    <img src="<?php echo get_template_directory_uri() ?>/img/fe0526ae8f0482ece54f67cffd20cf8a 2.jpg" alt="/" data-nav="0">
+                    <div class="gallery__item-title">Banana</div>
+                </div>
+                <div class="gallery__item">
+                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt="/" data-nav="1">
                     <div class="gallery__item-title">Blueberry</div>
                 </div>
                 <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (2)-min.png" alt="/">
-                    <div class="gallery__item-title">Blueberry</div>
-                </div>
-                <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (3)-min.png" alt="/">
-                    <div class="gallery__item-title">Blueberry</div>
+                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (3)-min.png" alt="/" data-nav="2">
+                    <div class="gallery__item-title">Rainbow</div>
                 </div>
             </div><!--gallery__left-upper-->
             <div class="gallery__left-lower">
                 <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (4)-min.png" alt="/">
-                    <div class="gallery__item-title">Blueberry</div>
+                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16 (4)-min.png" alt="/" data-nav="3">
+                    <div class="gallery__item-title">Strawberry</div>
                 </div>
                 <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16-min.png" alt="/">
-                    <div class="gallery__item-title">Blueberry</div>
+                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16-min.png" alt="/" data-nav="4">
+                    <div class="gallery__item-title">Orange</div>
                 </div>
                 <div class="gallery__item">
-                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16チョコ.png" alt="/">
-                    <div class="gallery__item-title">Blueberry</div>
+                    <img src="<?php echo get_template_directory_uri() ?>/img/Frame 16チョコ.png" alt="/" data-nav="5">
+                    <div class="gallery__item-title">Chocolate</div>
                 </div>
             </div><!--gallery__left-lower-->
         </div><!--gallery__container-left-->
-        <div class="gallery__container-right">
+        <div class="gallery__container-right" data-content="0">
+            <img src="<?php echo get_template_directory_uri() ?>/img/バナナホール.jpeg" alt="/">
+        </div>
+        <div class="gallery__container-right" data-content="1">
             <img src="<?php echo get_template_directory_uri() ?>/img/Frame 11-min.jpeg" alt="/">
+        </div>
+        <div class="gallery__container-right" data-content="2">
+            <img src="<?php echo get_template_directory_uri() ?>/img/レインボウホール 2.jpeg" alt="/">
+        </div>
+        <div class="gallery__container-right" data-content="3">
+            <img src="<?php echo get_template_directory_uri() ?>/img/Frame 5-min.jpeg" alt="/">
+        </div>
+        <div class="gallery__container-right" data-content="4">
+            <img src="<?php echo get_template_directory_uri() ?>/img/オレンジホール.jpeg" alt="/">
+        </div>
+        <div class="gallery__container-right" data-content="5">
+            <img src="<?php echo get_template_directory_uri() ?>/img/チョコレートホール.jpeg" alt="/">
         </div>
     </div><!--gallery__container-->
 </section>
